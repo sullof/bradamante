@@ -8,26 +8,21 @@ Local watchdog. It checks one or more URLs on a timer, skips those checks when y
 npm install -g urlmonitor
 ```
 
-Or from this folder:
-
-```bash
-npm link
-```
-
 ## Configure
 
-The config lives in your home directory, not in the project:
+The first run creates `~/.urlmonitor-config.js`. Pass the sites, separated by commas or spaces. The other settings are the defaults.
 
 ```bash
-urlmonitor init
+urlmonitor https://example.com/,https://example.org/
 ```
 
-That writes `~/.urlmonitor-config.js` from the example, if the file is not already there. Edit `urls` and leave the rest alone unless you need to.
+The program writes the file and starts watching. After that, change the list by editing `~/.urlmonitor-config.js`. Passing sites again does not overwrite it.
 
 ```js
 module.exports = {
   urls: [
     "https://example.com/",
+    "https://example.org/",
   ],
   pollMs: 60 * 60 * 1000,
   timeoutMs: 8000,
@@ -53,18 +48,17 @@ module.exports = {
 
 ## Run
 
+Once the file exists:
+
 ```bash
 urlmonitor
 ```
 
-Pass URLs to watch something else for this run only. The home file stays as it is.
-
-```bash
-urlmonitor https://site-a.example/health https://site-b.example/
-```
-
-```bash
-urlmonitor --poll-ms 20000 --timeout-ms 5000 --threshold 1
-```
-
 Each cycle checks connectivity first. If that fails, the alert sounds once, target checks are skipped, and they resume when connectivity returns.
+
+## Copyright
+
+Copyright © 2026 Francesco Sullo <francesco@sullo.co>.
+
+Released under the [GNU General Public License v3.0](LICENSE.md).
+

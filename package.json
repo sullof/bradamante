@@ -1,0 +1,19 @@
+{
+  "name": "urlmonitor",
+  "version": "1.0.0",
+  "description": "Local watchdog that checks URLs and alerts when one goes down",
+  "bin": {
+    "urlmonitor": "./bin/urlmonitor.js"
+  },
+  "files": [
+    "bin",
+    "urlmonitor-config.example.js",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "Francesco Sullo",
+  "license": "GPL-3.0-only"
+}
