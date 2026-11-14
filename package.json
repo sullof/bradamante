@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Local watchdog that checks URLs and alerts when one goes down",
   "bin": {
-    "urlmonitor": "./bin/urlmonitor.js"
+    "urlmonitor": "bin/urlmonitor.js"
   },
   "files": [
     "bin",
