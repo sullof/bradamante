@@ -1,22 +1,22 @@
-# urlmonitor
+# Bradamante
 
 Local watchdog. It checks one or more URLs on a timer, skips those checks when your laptop is offline, and plays a sound only when a target goes down or the internet drops. After sleep, it runs a check immediately instead of waiting out the rest of the interval.
 
 ## Install
 
 ```bash
-npm install -g urlmonitor
+npm install -g bradamante
 ```
 
 ## Configure
 
-The first run creates `~/.urlmonitor-config.js`. Pass the sites, separated by commas or spaces. The other settings are the defaults.
+The first run creates `~/.bradamante-config.js`. Pass the sites, separated by commas or spaces. The other settings are the defaults.
 
 ```bash
-urlmonitor https://example.com/,https://example.org/
+bradamante https://example.com/,https://example.org/
 ```
 
-The program writes the file and starts watching. After that, change the list by editing `~/.urlmonitor-config.js`. Passing sites again does not overwrite it.
+The program writes the file and starts watching. After that, change the list by editing `~/.bradamante-config.js`. Passing sites again does not overwrite it.
 
 ```js
 module.exports = {
@@ -51,7 +51,7 @@ module.exports = {
 Once the file exists:
 
 ```bash
-urlmonitor
+bradamante
 ```
 
 Each cycle checks connectivity first. If that fails, the alert sounds once, target checks are skipped, and they resume when connectivity returns.

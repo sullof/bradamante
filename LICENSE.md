@@ -1,6 +1,6 @@
-# urlmonitor — GNU GPLv3
+# Bradamante — GNU GPLv3
 
-**urlmonitor** is licensed under the **GNU General Public License v3.0**.
+**Bradamante** is licensed under the **GNU General Public License v3.0**.
 
 Copyright © 2026 Francesco Sullo (francesco@sullo.co).
 

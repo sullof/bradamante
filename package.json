@@ -1,13 +1,13 @@
 {
-  "name": "urlmonitor",
+  "name": "bradamante",
   "version": "1.0.0",
   "description": "Local watchdog that checks URLs and alerts when one goes down",
   "bin": {
-    "urlmonitor": "bin/urlmonitor.js"
+    "bradamante": "bin/bradamante.js"
   },
   "files": [
     "bin",
-    "urlmonitor-config.example.js",
+    "bradamante-config.example.js",
     "LICENSE.md",
     "README.md"
   ],

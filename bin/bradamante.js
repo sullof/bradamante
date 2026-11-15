@@ -5,7 +5,7 @@ const fs = require("node:fs");
 const os = require("node:os");
 const path = require("node:path");
 
-const CONFIG_PATH = path.join(os.homedir(), ".urlmonitor-config.js");
+const CONFIG_PATH = path.join(os.homedir(), ".bradamante-config.js");
 
 const DEFAULTS = {
   pollMs: 60 * 60 * 1000,
@@ -32,7 +32,7 @@ if (!fs.existsSync(CONFIG_PATH)) {
     console.error(`Missing ${CONFIG_PATH}`);
     console.error("First run: pass the sites to watch, separated by commas or spaces.");
     console.error("Example:");
-    console.error("  urlmonitor https://example.com/,https://example.org/");
+    console.error("  bradamante https://example.com/,https://example.org/");
     process.exit(1);
   }
   assertHttpUrls(cli.urls);
@@ -81,12 +81,12 @@ let lastLoopStart = Date.now();
 let internetIsDown = false;
 
 function printHelp() {
-  console.log(`urlmonitor — check URLs and alert when one goes down
+  console.log(`bradamante — check URLs and alert when one goes down
 
 Usage:
-  urlmonitor <url>[,<url>...]        first run: save these sites to ${CONFIG_PATH} and start
-  urlmonitor                         later runs: watch the sites in that file
-  urlmonitor --help
+  bradamante <url>[,<url>...]        first run: save these sites to ${CONFIG_PATH} and start
+  bradamante                         later runs: watch the sites in that file
+  bradamante --help
 
 Options:
   --poll-ms <ms>                     interval between cycles
@@ -394,7 +394,7 @@ async function loop() {
   }
 }
 
-logLine(`URL monitor started. Poll every ${pollMs}ms; timeout ${timeoutMs}ms; threshold ${failureThreshold}.`);
+logLine(`Bradamante started. Poll every ${pollMs}ms; timeout ${timeoutMs}ms; threshold ${failureThreshold}.`);
 logLine(`Monitoring ${urls.length} URL(s): ${urls.join(", ")}`);
 logLine(`Connectivity pre-check URLs: ${connectivityUrls.join(", ")}`);
 loop();
