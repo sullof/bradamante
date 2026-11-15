@@ -1,5 +1,7 @@
 # Bradamante
 
+Bradamante is the woman knight of Matteo Maria Boiardo's *Orlando Innamorato* and Ludovico Ariosto's *Orlando Furioso*. She crosses the poem with her lance, looking for Ruggiero, and does not stay home. The program takes her name for that: a knight out of a romance, on watch.
+
 Local watchdog. It checks one or more URLs on a timer, skips those checks when your laptop is offline, and plays a sound only when a target goes down or the internet drops. After sleep, it runs a check immediately instead of waiting out the rest of the interval.
 
 ## Install

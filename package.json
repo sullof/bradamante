@@ -1,6 +1,6 @@
 {
   "name": "bradamante",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Local watchdog that checks URLs and alerts when one goes down",
   "bin": {
     "bradamante": "bin/bradamante.js"
